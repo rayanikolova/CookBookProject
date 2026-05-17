@@ -49,6 +49,23 @@ public:
         return title;
     }
 };
+class MealPlan {
+private:
+    vector<Recipe> recipes;
+
+public:
+    void addRecipe(Recipe recipe) {
+        recipes.push_back(recipe);
+    }
+
+    void showMealPlan() {
+        cout << "\nMeal Plan:" << endl;
+
+        for (auto& recipe : recipes) {
+            cout << "- " << recipe.getTitle() << endl;
+        }
+    }
+};
 int main() {
     cout << "Cookbook Project";
     return 0;
