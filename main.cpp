@@ -67,6 +67,18 @@ public:
     }
 };
 int main() {
-    cout << "Cookbook Project";
+
+    Recipe pasta("Pasta");
+
+    pasta.addIngredient(Ingredient("Pasta"));
+    pasta.addIngredient(Ingredient("Cheese"));
+
+    pasta.showRecipe();
+
+    MealPlan weeklyPlan;
+    weeklyPlan.addRecipe(pasta);
+
+    weeklyPlan.showMealPlan();
+
     return 0;
 }
